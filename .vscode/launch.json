@@ -5,10 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "foundry_widget_book Chrome",
-            "request": "launch",
+            "name": "Flutter Web (WASM)",
             "type": "dart",
+            "request": "launch",
             "deviceId": "chrome",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--wasm"
+            ]
+        },
+        {
+            "name": "Flutter Web (JS - faster debug)",
+            "type": "dart",
+            "request": "launch",
+            "deviceId": "chrome",
+            "program": "lib/main.dart"
         }
     ]
 }
