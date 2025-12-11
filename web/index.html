@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Foundry Widget Book - A comprehensive showcase for the Foundry Design System, featuring Flutter components, patterns, and design tokens.">
+  <meta name="keywords" content="Flutter, Design System, UI Components, Widget Book, Foundry">
+  <meta name="author" content="Luis Felipe Bardi">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Foundry Widget Book">
+  <meta property="og:description"
+    content="A comprehensive showcase for the Foundry Design System - Flutter components, patterns, and design tokens.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icons/Icon-512.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Foundry Widget Book">
+  <meta name="twitter:description" content="A comprehensive showcase for the Foundry Design System.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Foundry Widget Book">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>Foundry Widget Book</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loader {
+      width: 50px;
+      aspect-ratio: 1;
+      --_c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+      background:
+        var(--_c) top,
+        var(--_c) left,
+        var(--_c) right,
+        var(--_c) bottom;
+      background-size: 12px 12px;
+      animation: l7 1s infinite;
+    }
+
+    @keyframes l7 {
+      to {
+        transform: rotate(.5turn);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading" class="loading-container">
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Hide loading indicator once Flutter is ready
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('loading').style.display = 'none';
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+
+</html>
